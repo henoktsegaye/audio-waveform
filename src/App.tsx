@@ -70,7 +70,6 @@ function App() {
   };
 
   const checkIfValidImageFileSelected = (file: File | null) => {
-    console.log("FILE TYPE", file?.type);
     if (!file) return false;
     const validFileTypes = ["image/jpeg", "image/png"];
     return validFileTypes.includes(file.type);
@@ -128,13 +127,10 @@ function App() {
     <div className=" grid grid-cols-12 gap-4  h-screen w-screen">
       <div className=" col-span-3 border-r-2 flex flex-col justify-between  h-full px-4 py-10 border-gray-900">
         <div>
-          <h1 className="text-3xl  uppercase font-bold text-left mb-2 text-green-500">
+          <h1 className="text-xl text-center  uppercase font-bold text-left mb-2 text-green-500">
             Audio Visualizer
           </h1>
-          <p className="text-sm text-gray-400 mb-6 ">
-            Give it audio and image and it will create an audio Visualizer with
-            that image as a video. which you can download and use.
-          </p>
+
           <div className="mb-2 bg-black rounded-lg p-4">
             <label htmlFor="audioFile">Audio File</label>
             <input
